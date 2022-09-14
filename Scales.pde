@@ -3,9 +3,23 @@ void setup() {
   noLoop(); //stops the draw() function from repeating
 }
 void draw() {
-  //your code here
+   scale(50,500);
 }
 void scale(int x, int y) {
-  //your code here
+  beginShape();
+  curveVertex(50, 50);
+  curveVertex(50, 50);
+  curveVertex(100, 10);
+  curveVertex(180, 15);
+  curveVertex(180, 15);
+  endShape();
+  beginShape();
+  curveVertex(50, 50);
+  curveVertex(50, 50);
+  curveVertex(100, 100);
+  curveVertex(150, 100);
+  curveVertex(180, 15);
+  curveVertex(180, 15);
+  endShape();
 }
 
