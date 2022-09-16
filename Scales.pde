@@ -2,35 +2,28 @@ void setup() {
   size(800, 800); 
   noLoop();
 }
-void draw() {
   boolean shift = true;
-  for(int y = 15; y < 800; y+=45){
-    for(int x = 15; x < 800; x+=45)
+  
+void draw() {
+
+  for(int y = 5; y < 800; y+=40)
+  {
+    for(int x = 0; x < 800; x+=45)
+    {
     if(shift == true)
-      scale(x , y);
+      scale(x + 15, y);
     else
       scale(x , y);
-}
+    }
     if(shift == true)
       shift = false;
     else
-    shift = false;
+    shift = true;
+  }
 }
 void scale(int x, int y) {
-  ellipse(x, y, 50, 50);
-  /*beginShape();
-  curveVertex(50, 50);
-  curveVertex(50, 50);
-  curveVertex(100, 10);
-  curveVertex(180, 15);
-  curveVertex(180, 15);
-  endShape();
-  beginShape();
-  curveVertex(50, 50);
-  curveVertex(50, 50);
-  curveVertex(100, 100);
-  curveVertex(150, 100);
-  curveVertex(180, 15);
-  curveVertex(180, 15);
-  endShape();*/
+  rect(x, y, 80, 50);
+  ellipse(x, y, 40, 40);
+  fill(255, 0, 0);
+  bezier(x-15, y-15, 5+x, 10+y, 15+x, 5+y, x+5, y+5);
 }
