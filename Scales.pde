@@ -22,8 +22,10 @@ void draw() {
   }
 }
 void scale(int x, int y) {
+  fill(0, x, y);
+  ellipse(x, y, 60, 40);
   rect(x, y, 80, 50);
-  ellipse(x, y, 40, 40);
-  fill(255, 0, 0);
+  
   bezier(x-15, y-15, 5+x, 10+y, 15+x, 5+y, x+5, y+5);
+  
 }
